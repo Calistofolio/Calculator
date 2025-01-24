@@ -1,4 +1,30 @@
 .wrapper {
     text-align: center;
+    width: 380px;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 
+.orange{
+    background-color: #f1a33b;
+}
+.gray{
+    background-color: #a5a5a5;
+    color: black;
+}
+.dark-gray{
+    background-color: #333333;
+}
+.zero{
+    width: 160px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
 }
