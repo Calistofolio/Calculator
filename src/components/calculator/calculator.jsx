@@ -6,7 +6,6 @@ import "./calculator.css"
 function Calculator() {
 
   const [input, setInput] = useState(" ") 
-  const [perInput, setPerInput] = useState(" ")
 
   const row2 = ["7", "8" , "9"]
   const row3 = ["4", "5" , "6"]
@@ -19,11 +18,6 @@ function Calculator() {
       setInput((prev) => prev + value)
     }
 
-    if(value == "%"){
-        setPerInput(input)
-        setInput("%")
-    }
-
     if(input == undefined || input == " " && value == "/"
         || input == undefined || input == " " && value == "+"
         || input == undefined || input == " " && value == "*"){
@@ -34,18 +28,16 @@ function Calculator() {
   function equals() {
     const result = eval(input)
     setInput(result)
-    setPerInput(" ")
   }
 
   function clean(){
     setInput(" ")
-    setPerInput(" ")
   }
 
 
   return (
     <div className = "wrapper">
-        <Screen input = {perInput + input}/>
+        <Screen input = {input}/>
         <div>
         <Button class = "gray" title = "AC" onclick = {() => clean()}/>
         <Button class = "gray" title = "+/-" onclick = {() => addValue("/")}/>
