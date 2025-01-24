@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Button from "./components/button/button"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const row1 = ["AC", "+/-" ,"%", "/"]
+  const row2 = [7, 8 , 9, "X"]
+  const row3 = [4, 5 , 6, "-"]
+  const row4 = [1, 2 , 3, "+"]
+  const row5 = [0, ",", "="]
+
 
   return (
-    <>
+    <div>
+      {row1.map((n) => <Button title = {n}/>)}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {row2.map((n) => <Button title = {n}/>)}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        {row3.map((n) => <Button title = {n}/>)}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <div>
+        {row4.map((n) => <Button title = {n}/>)}
+      </div>
+      <div>
+        {row5.map((n) => <Button title = {n}/>)}
+      </div>
+    </div>
   )
 }
 
